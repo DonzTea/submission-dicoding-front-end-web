@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <section id="left">
+        <div class="card">
+          <form>
+            <div id="form-title" class="card-title text-primary">
+              Masukkan Buku Baru
+            </div>
+
+            <!-- add or edit -->
+            <input type="hidden" name="bookId" />
+
+            <div class="form-input">
+              <label for="title" class="text-primary">Judul</label>
+              <input
+                id="title"
+                name="title"
+                type="text"
+                placeholder="contoh: Harry Potter"
+              />
+            </div>
+
+            <div class="form-input">
+              <label for="author" class="text-primary">Penulis</label>
+              <input
+                id="author"
+                name="author"
+                type="text"
+                placeholder="contoh: J.K. Rowling"
+              />
+            </div>
+
+            <div class="form-input">
+              <label for="year" class="text-primary">Tahun</label>
+              <input
+                id="year"
+                name="year"
+                type="number"
+                placeholder="contoh: 2021"
+                min="1800"
+              />
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <input type="checkbox" name="isComplete" id="isComplete" />
+                <label for="isComplete">Selesai dibaca</label>
+              </div>
+              <div class="col-6">
+                <button type="submit" class="bg-primary text-white">
+                  Simpan Buku
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="right">
+        <div id="search-wrapper">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Cari judul buku..."
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="card">
+          <div class="row">
+            <div class="col-6">
+              <div class="card">
+                <div class="card-title text-primary">Belum terbaca</div>
+                <div class="bookshelf"></div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card">
+                <div class="card-title text-primary">Sudah dibaca</div>
+                <div class="bookshelf"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/scripts/script.js"></script>
+  </body>
+</html>
